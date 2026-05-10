@@ -85,20 +85,7 @@
     </div>
   </header>
 
-  <!-- DISCOUNT POPUP -->
-  <div class="promo-popup" id="promoPopup" aria-hidden="true">
-    <div class="promo-popup-backdrop"></div>
-    <div class="promo-popup-box" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
-      <button class="promo-popup-close" aria-label="Uždaryti">×</button>
-      <div class="promo-popup-badge">AKCIJA</div>
-      <div class="promo-popup-price" id="promoTitle">−20%</div>
-      <div class="promo-popup-sub">iki birželio 1 d.</div>
-      <div class="promo-popup-cta-wrap">
-        <a href="#registracija" class="promo-popup-cta" id="promoCta">Registruokis dabar</a>
-      </div>
-      <div class="promo-popup-note">Vietų skaičius ribotas</div>
-    </div>
-  </div>
+  <!-- DISCOUNT POPUP injected by app.js after load (kept out of initial paint to avoid LCP penalty) -->
 
   <!-- ═══════════════════════ MAIN PAGE ═══════════════════════ -->
   <main class="container" id="mainContent" data-reveal style="--d:80ms">

@@ -68,7 +68,6 @@
     }
 
     goTo(index, animate = true) {
-      this._measure();
       this.index = (index + this.slides.length) % this.slides.length;
       this.track.style.transition = animate ? 'transform 420ms ease' : 'none';
       this.track.style.transform = `translateX(${this._translateFor(this.index)}px)`;
@@ -586,11 +585,28 @@
 
   // ── PROMO POPUP ──────────────────────────────────────────────────────────────
   function initPromoPopup() {
-    const popup = document.getElementById('promoPopup');
-    if (!popup) return;
     try {
       if (sessionStorage.getItem('promoDismissed') === '1') return;
     } catch {}
+
+    const popup = document.createElement('div');
+    popup.className = 'promo-popup';
+    popup.id = 'promoPopup';
+    popup.setAttribute('aria-hidden', 'true');
+    popup.innerHTML = `
+      <div class="promo-popup-backdrop"></div>
+      <div class="promo-popup-box" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
+        <button class="promo-popup-close" aria-label="Uždaryti">×</button>
+        <div class="promo-popup-badge">AKCIJA</div>
+        <div class="promo-popup-price" id="promoTitle">−20%</div>
+        <div class="promo-popup-sub">iki birželio 1 d.</div>
+        <div class="promo-popup-cta-wrap">
+          <a href="#registracija" class="promo-popup-cta" id="promoCta">Registruokis dabar</a>
+        </div>
+        <div class="promo-popup-note">Vietų skaičius ribotas</div>
+      </div>
+    `;
+    document.body.appendChild(popup);
 
     const open = () => {
       popup.classList.add('is-open');
@@ -610,7 +626,7 @@
 
     if (closeBtn) closeBtn.addEventListener('click', close);
     if (backdrop) backdrop.addEventListener('click', close);
-    if (cta) cta.addEventListener('click', close); // close AND follow href to #registracija
+    if (cta) cta.addEventListener('click', close);
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && popup.classList.contains('is-open')) close();
