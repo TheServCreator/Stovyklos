@@ -74,7 +74,7 @@ export async function onRequestPost(context) {
       port: SMTP_PORT,
       username: env.SMTP_USERNAME,
       password: env.SMTP_PASSWORD,
-      from: fromEmail,
+      from: TO_ADDRESS,
       to: TO_ADDRESS,
       replyTo: fromEmail,
       subject,
