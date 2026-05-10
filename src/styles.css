@@ -40,9 +40,11 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;color:#111;overflow-x:hidden
 }
 
 /* ── LOAD IN ── */
-body.preload [data-reveal]{opacity:0;transform:translateY(12px)}
-body.loaded  [data-reveal]{opacity:1;transform:translateY(0);transition:opacity 700ms cubic-bezier(.4,0,.2,1),transform 700ms cubic-bezier(.4,0,.2,1);transition-delay:var(--d,0ms)}
-@media(prefers-reduced-motion:reduce){body.preload [data-reveal],body.loaded [data-reveal]{opacity:1;transform:none;transition:none}}
+/* Reveal slides up slightly without ever hiding content. Keeps LCP/FCP fast — content
+   paints from frame 1 at full opacity. The transform is purely cosmetic motion. */
+[data-reveal]{animation:revealIn 700ms cubic-bezier(.4,0,.2,1) both;animation-delay:var(--d,0ms)}
+@keyframes revealIn{from{transform:translateY(12px)}to{transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){[data-reveal]{animation:none}}
 
 /* ── HEADER (yellow bar) ── */
 .header{position:sticky;top:0;z-index:100;background:var(--b4k-yellow);border-bottom:5px solid var(--b4k-red);box-shadow:0 4px 16px rgba(0,0,0,.22)}
@@ -91,11 +93,12 @@ body.loaded  [data-reveal]{opacity:1;transform:translateY(0);transition:opacity 
 .nav-register:active{transform:translateY(4px);box-shadow:0 0 0 0 #a30010}
 
 @media(max-width:860px){
-  .header-inner{grid-template-columns:1fr;gap:8px;min-height:auto;padding:12px 18px}
-  .header-tagline-text{font-size:clamp(12px,3.5vw,16px)}
-  .header-tagline-sub{font-size:clamp(11px,2.5vw,13px)}
+  .header-inner{grid-template-columns:1fr;gap:6px;min-height:auto;padding:8px 14px}
+  .header-tagline-text{font-size:clamp(11px,3vw,14px);letter-spacing:.6px}
+  .header-tagline-sub{font-size:clamp(10px,2.2vw,12px);margin-top:2px}
   .header-right{justify-content:center}
   .header-phone{display:none}
+  .nav-register{padding:8px 16px;font-size:13px}
 }
 
 /* ── PROMO POPUP ── */
@@ -172,9 +175,9 @@ body.loaded  [data-reveal]{opacity:1;transform:translateY(0);transition:opacity 
 .hero-section .carousel__viewport{border-radius:0;overflow:hidden}
 .hero-section .carousel__slide{height:clamp(340px,55vw,620px)}
 .hero-section .slide-img{opacity:1;width:100%;height:100%;object-fit:cover;object-position:center 25%}
-.hero-section .slide-overlay{background:transparent;padding:clamp(16px,3vw,40px) clamp(20px,5vw,64px)}
-.hero-section .slide-title{font-family:'Poppins',sans-serif;font-size:clamp(28px,4.5vw,54px);font-weight:800;text-shadow:2px 2px 8px rgba(0,0,0,.5)}
-.hero-section .slide-sub{font-size:clamp(13px,1.6vw,20px);font-weight:700;text-shadow:1px 1px 4px rgba(0,0,0,.5)}
+.hero-section .slide-overlay{background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.65) 100%);padding:clamp(16px,3vw,40px) clamp(20px,5vw,64px)}
+.hero-section .slide-title{font-family:'Poppins',sans-serif;font-size:clamp(28px,4.5vw,54px);font-weight:800;text-shadow:2px 2px 8px rgba(0,0,0,.7)}
+.hero-section .slide-sub{font-size:clamp(13px,1.6vw,20px);font-weight:700;text-shadow:1px 1px 4px rgba(0,0,0,.7)}
 .hero-section .carousel__btn{top:50%;z-index:30;width:50px;height:50px;font-size:30px}
 .hero-section .carousel__btn--prev{left:14px}
 .hero-section .carousel__btn--next{right:14px}
@@ -473,8 +476,9 @@ body.loaded  [data-reveal]{opacity:1;transform:translateY(0);transition:opacity 
   .extras-wide-item{min-width:80px;flex:1 1 80px}
   .benefit-icon{width:50px;height:50px;font-size:22px}
   .card-logo-overlay{width:56px;height:56px;top:8px;right:8px}
-  .contact-horizontal{flex-direction:column;align-items:flex-start}
+  .contact-horizontal{flex-direction:column;align-items:center;text-align:center;gap:14px}
   .contact-horizontal .reg-btn{margin-left:0}
+  .contact-sep{display:none}
   .testimonial-card{padding:20px 18px}
   .testimonial-text{font-size:14px}
 }
