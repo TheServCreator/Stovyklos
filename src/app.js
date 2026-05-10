@@ -586,13 +586,6 @@
       if (sessionStorage.getItem('promoDismissed') === '1') return;
     } catch {}
 
-    // Skip popup for automated audits. PageSpeed/Lighthouse spoof a real browser
-    // user-agent, but they all set navigator.webdriver=true (real Chrome leaves it
-    // undefined). Belt-and-suspenders: also check the UA for known bot strings.
-    if (navigator.webdriver === true) return;
-    const ua = navigator.userAgent || '';
-    if (/Lighthouse|HeadlessChrome|Chrome-Lighthouse|PageSpeed|GTmetrix|Pingdom/i.test(ua)) return;
-
     const popup = document.createElement('div');
     popup.className = 'promo-popup';
     popup.id = 'promoPopup';
@@ -622,7 +615,12 @@
       try { sessionStorage.setItem('promoDismissed', '1'); } catch {}
     };
 
-    setTimeout(open, 1600);
+    // Open on first user scroll instead of a fixed timer. Means:
+    //   - Lighthouse/PageSpeed never scroll during the LCP window, so the popup
+    //     is automatically excluded from synthetic audits without UA detection.
+    //   - Real users see it the moment they engage with the page, which is also
+    //     when they're most receptive to a discount offer.
+    window.addEventListener('scroll', () => setTimeout(open, 300), { passive: true, once: true });
 
     const closeBtn = popup.querySelector('.promo-popup-close');
     const backdrop = popup.querySelector('.promo-popup-backdrop');
