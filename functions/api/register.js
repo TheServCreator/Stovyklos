@@ -17,22 +17,9 @@ const REQUIRED_FIELDS = [
   'kontakto_epastas',
 ];
 
-export default {
-  async fetch(request, env) {
-    const url = new URL(request.url);
+export async function onRequestPost(context) {
+  const { request, env } = context;
 
-    if (url.pathname === '/api/register') {
-      if (request.method !== 'POST') {
-        return new Response('Method Not Allowed', { status: 405 });
-      }
-      return handleRegister(request, env);
-    }
-
-    return env.ASSETS.fetch(request);
-  },
-};
-
-async function handleRegister(request, env) {
   let data;
   try {
     const ct = (request.headers.get('content-type') || '').toLowerCase();

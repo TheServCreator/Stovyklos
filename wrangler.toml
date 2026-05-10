@@ -1,15 +1,10 @@
 name = "topstovyklos"
-main = "worker/index.js"
 compatibility_date = "2025-09-23"
 compatibility_flags = ["nodejs_compat"]
-
-[assets]
-directory = "./dist"
-binding = "ASSETS"
-not_found_handling = "single-page-application"
+pages_build_output_dir = "dist"
 
 # SMTP credentials must be set as ENCRYPTED secrets (not in this file):
-#   wrangler secret put SMTP_USERNAME
-#   wrangler secret put SMTP_PASSWORD
+#   wrangler pages secret put SMTP_USERNAME --project-name topstovyklos
+#   wrangler pages secret put SMTP_PASSWORD --project-name topstovyklos
 # Or via Cloudflare dashboard: Workers & Pages → topstovyklos → Settings →
 # Variables and Secrets → add SMTP_USERNAME and SMTP_PASSWORD as encrypted.
