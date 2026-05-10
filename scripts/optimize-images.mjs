@@ -12,6 +12,7 @@ const FOLDER_MAX = {
   'public/lms':     800,
   'public/outdoor': 800,
   'public/bk':     1200,   // BKplakatas displayed up to 530x747
+  'public/bk-imported': 1200, // imported third-party photos
 };
 
 // horizontal logos and small overlays — special-case override (max longest side)
