@@ -67,7 +67,7 @@
     }
 
     _percentTranslate(index) {
-      return -(index / this.slides.length) * 100;
+      return -index * 100;
     }
 
     goTo(index, animate = true) {
