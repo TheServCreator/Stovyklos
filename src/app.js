@@ -32,7 +32,6 @@
 
       this._buildDots();
       this._bind();
-      this._measure();
       this.goTo(0, false);
       this._start();
     }
@@ -67,10 +66,14 @@
       return -index * this.width;
     }
 
+    _percentTranslate(index) {
+      return -(index / this.slides.length) * 100;
+    }
+
     goTo(index, animate = true) {
       this.index = (index + this.slides.length) % this.slides.length;
       this.track.style.transition = animate ? 'transform 420ms ease' : 'none';
-      this.track.style.transform = `translateX(${this._translateFor(this.index)}px)`;
+      this.track.style.transform = `translateX(${this._percentTranslate(this.index)}%)`;
       this._setActiveDot();
       this._resetProgress();
     }
@@ -129,20 +132,14 @@
         else this._start();
       });
 
-      window.addEventListener('resize', () => {
-        const prevIndex = this.index;
-        this._measure();
-        this.goTo(prevIndex, false);
-      });
-
       const onDown = (e) => {
         this.isDragging = true;
         this._pause();
+        this._measure();
         this.track.style.transition = 'none';
         this.startX = (e.touches ? e.touches[0].clientX : e.clientX);
         this.currentX = this.startX;
-        const m = /translateX\(([-0-9.]+)px\)/.exec(this.track.style.transform || '');
-        this.startTranslate = m ? Number(m[1]) : this._translateFor(this.index);
+        this.startTranslate = this._translateFor(this.index);
       };
 
       const onMove = (e) => {
@@ -156,7 +153,7 @@
         if (!this.isDragging) return;
         this.isDragging = false;
         const dx = this.currentX - this.startX;
-        const threshold = Math.min(120, this.width * 0.18);
+        const threshold = Math.min(120, (this.width || 300) * 0.18);
         if (dx > threshold) this.prev();
         else if (dx < -threshold) this.next();
         else this.goTo(this.index);
@@ -618,7 +615,19 @@
       try { sessionStorage.setItem('promoDismissed', '1'); } catch {}
     };
 
-    setTimeout(open, 1600);
+    let opened = false;
+    const triggerOpen = () => {
+      if (opened) return;
+      opened = true;
+      open();
+    };
+    const events = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+    const onUserActivity = () => {
+      events.forEach(ev => window.removeEventListener(ev, onUserActivity, { passive: true }));
+      setTimeout(triggerOpen, 600);
+    };
+    events.forEach(ev => window.addEventListener(ev, onUserActivity, { passive: true, once: false }));
+    setTimeout(triggerOpen, 8000);
 
     const closeBtn = popup.querySelector('.promo-popup-close');
     const backdrop = popup.querySelector('.promo-popup-backdrop');

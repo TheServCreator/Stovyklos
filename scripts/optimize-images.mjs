@@ -1,16 +1,31 @@
 import sharp from 'sharp';
-import { readdir, stat, readFile, writeFile } from 'node:fs/promises';
-import { join, extname } from 'node:path';
+import { readdir, stat, readFile, writeFile, unlink } from 'node:fs/promises';
+import { join, extname, dirname, basename } from 'node:path';
 
 const PUBLIC_DIR = 'public';
-const MAX_DIM = 1200;
-const JPEG_QUALITY = 78;
-const PNG_QUALITY = 80;
+
+// Per-folder max dimension (longest side, in CSS pixels × 2 for retina)
+const FOLDER_MAX = {
+  'public/logos':   400,   // displayed 140-245px
+  'public/steam':   256,   // displayed 96-126px badges
+  'public/b4k':     800,   // carousel images displayed ~280-560px
+  'public/lms':     800,
+  'public/outdoor': 800,
+  'public/bk':     1200,   // BKplakatas displayed up to 530x747
+};
+
+// horizontal logos and small overlays — special-case override (max longest side)
+const FILE_OVERRIDES = {
+  'public/logos/businesskids-horizontal.png': 320,
+  'public/logos/meskuciai.jpeg': 200,
+};
+
+const WEBP_QUALITY = 75;
 
 async function walk(dir) {
   const out = [];
   for (const entry of await readdir(dir, { withFileTypes: true })) {
-    const full = join(dir, entry.name);
+    const full = join(dir, entry.name).replace(/\\/g, '/');
     if (entry.isDirectory()) out.push(...await walk(full));
     else out.push(full);
   }
@@ -20,38 +35,37 @@ async function walk(dir) {
 const files = (await walk(PUBLIC_DIR)).filter(f => /\.(jpe?g|png)$/i.test(f));
 
 let totalBefore = 0, totalAfter = 0;
+
 for (const file of files) {
   const beforeBytes = (await stat(file)).size;
   totalBefore += beforeBytes;
 
+  const folder = dirname(file);
+  const maxDim = FILE_OVERRIDES[file] ?? FOLDER_MAX[folder] ?? 1200;
+
   const buf = await readFile(file);
   const img = sharp(buf, { failOnError: false });
   const meta = await img.metadata();
-  const ext = extname(file).toLowerCase();
 
-  let pipeline = img;
-  const needsResize = (meta.width || 0) > MAX_DIM || (meta.height || 0) > MAX_DIM;
-  if (needsResize) {
-    pipeline = pipeline.resize({ width: MAX_DIM, height: MAX_DIM, fit: 'inside', withoutEnlargement: true });
+  const needsResize = (meta.width || 0) > maxDim || (meta.height || 0) > maxDim;
+  const pipeline = needsResize
+    ? img.resize({ width: maxDim, height: maxDim, fit: 'inside', withoutEnlargement: true })
+    : img;
+
+  const webpBuf = await pipeline.clone().webp({ quality: WEBP_QUALITY, effort: 6 }).toBuffer();
+  const webpPath = file.replace(/\.(jpe?g|png)$/i, '.webp');
+
+  await writeFile(webpPath, webpBuf);
+  totalAfter += webpBuf.length;
+
+  if (webpPath !== file) {
+    await unlink(file);
   }
 
-  if (ext === '.png') {
-    pipeline = pipeline.png({ quality: PNG_QUALITY, compressionLevel: 9, palette: true });
-  } else {
-    pipeline = pipeline.jpeg({ quality: JPEG_QUALITY, mozjpeg: true });
-  }
-
-  const out = await pipeline.toBuffer();
-
-  if (out.length < beforeBytes * 0.95) {
-    await writeFile(file, out);
-    totalAfter += out.length;
-    const pct = ((1 - out.length / beforeBytes) * 100).toFixed(0);
-    console.log(`${file}: ${(beforeBytes/1024).toFixed(0)}KB -> ${(out.length/1024).toFixed(0)}KB (-${pct}%)`);
-  } else {
-    totalAfter += beforeBytes;
-    console.log(`${file}: skipped (already optimal)`);
-  }
+  const pct = ((1 - webpBuf.length / beforeBytes) * 100).toFixed(0);
+  console.log(`${file} -> ${webpPath}: ${(beforeBytes/1024).toFixed(0)}KB -> ${(webpBuf.length/1024).toFixed(0)}KB (-${pct}%) [max ${maxDim}px]`);
 }
 
-console.log(`\nTotal: ${(totalBefore/1024/1024).toFixed(1)}MB -> ${(totalAfter/1024/1024).toFixed(1)}MB`);
+console.log(`\nTotal: ${(totalBefore/1024/1024).toFixed(2)}MB -> ${(totalAfter/1024/1024).toFixed(2)}MB`);
+console.log(`\nNext step: update <img src="..."> in index.html — run:`);
+console.log(`  node scripts/rewrite-img-srcs.mjs`);
