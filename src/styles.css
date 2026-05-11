@@ -59,6 +59,9 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;color:#111;overflow-x:hidden
   width:100%;
 }
 
+.header-logo{grid-column:1;display:flex;align-items:center;justify-self:start;height:100%;text-decoration:none}
+.header-logo img{height:64px;width:64px;object-fit:contain;display:block;border-radius:8px;background:#fff;padding:4px;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+
 .header-tagline{grid-column:2;text-align:center}
 .header-tagline-text{
   font-family:'Poppins',sans-serif;font-weight:900;color:var(--b4k-red);
@@ -99,6 +102,7 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;color:#111;overflow-x:hidden
   .header-right{justify-content:center}
   .header-phone{display:none}
   .nav-register{padding:8px 16px;font-size:13px}
+  .header-logo{display:none}
 }
 
 /* ── PROMO POPUP ── */
@@ -271,8 +275,11 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;color:#111;overflow-x:hidden
 /* ── BENEFITS PILLS ── */
 .benefits-pills-wrap{padding:12px 0 4px}
 .benefits-pills-title{font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(15px,2vw,21px);color:var(--b4k-red);margin-bottom:14px;text-align:center}
-.benefits-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.bpill{display:inline-block;padding:10px 22px;border-radius:50px;font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(12px,1.25vw,14px);color:#fff;line-height:1.3;text-align:center}
+.benefits-pills{display:grid;grid-template-columns:repeat(4,max-content);gap:12px;justify-content:start}
+.bpill{display:inline-block;padding:12px 26px;border-radius:50px;font-family:'Poppins',sans-serif;font-weight:700;font-size:clamp(14px,1.5vw,17px);color:#fff;line-height:1.3;text-align:center}
+@media(max-width:1100px){.benefits-pills{grid-template-columns:repeat(3,max-content)}}
+@media(max-width:780px){.benefits-pills{grid-template-columns:repeat(2,max-content)}}
+@media(max-width:460px){.benefits-pills{grid-template-columns:1fr}}
 .bpill-red{background:var(--b4k-red)}
 .bpill-blue{background:var(--b4k-blue)}
 .bpill-yellow{background:var(--b4k-yellow);color:#1a1a1a}
