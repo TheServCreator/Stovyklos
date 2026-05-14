@@ -8,7 +8,7 @@
 
 backend:
   name: github
-  repo: gaurilgustas284-wq/Stovyklos
+  repo: TheServCreator/Stovyklos
   branch: main
   # Cloudflare Worker, tvarkantis GitHub prisijungimą. KOL KAS PLACEHOLDER —
   # pakeiskite į savo worker adresą pagal ADMIN-SETUP.md instrukciją.
