@@ -18,9 +18,10 @@ backend:
 site_url: https://topstovyklos.lt
 display_url: https://topstovyklos.lt
 
-# Įkeltų failų vieta — naudojama vėlesniam etapui (karuselių nuotraukos, logotipai).
-media_folder: public/uploads
-public_folder: /uploads
+# Visas public/ aplankas yra nuotraukų biblioteka — galima rinktis esamas
+# nuotraukas (b4k, lms, bk, logos ir kt.) arba įkelti naujas.
+media_folder: public
+public_folder: /
 
 collections:
   # ── STOVYKLOS ────────────────────────────────────────────────────────────
@@ -107,3 +108,220 @@ collections:
                 label: Data
                 widget: string
                 hint: 'pvz. Birželio 15-19 d.'
+
+  # ── SVETAINĖS TURINYS ────────────────────────────────────────────────────
+  - name: content
+    label: Svetainės turinys
+    label_singular: Turinio blokas
+    files:
+      - name: site_content
+        label: Pagrindinis svetainės turinys
+        file: src/data/content.json
+        description: >-
+          Antraštė, pagrindinė karuselė, stovyklų kortelės, privalumai,
+          atsiliepimai, kontaktai, akcijos langas ir poraštė. Išsaugojus —
+          svetainė automatiškai atsinaujins per 1–2 minutes.
+        fields:
+          # ── Antraštė ──────────────────────────────────────────────────────
+          - name: header
+            label: Antraštė (puslapio viršus)
+            widget: object
+            collapsed: true
+            fields:
+              - { name: logo, label: Logotipas, widget: image }
+              - { name: logoAlt, label: 'Logotipo aprašymas (alt)', widget: string }
+              - { name: tagline, label: Šūkis, widget: string }
+              - { name: taglineSub, label: Šūkio paaiškinimas, widget: string }
+              - { name: phone, label: 'Telefonas (rodomas)', widget: string }
+              - name: phoneHref
+                label: 'Telefonas nuorodai'
+                widget: string
+                hint: 'Be tarpų, pvz. +37065050556'
+              - { name: registerLabel, label: 'Registracijos mygtuko tekstas', widget: string }
+
+          # ── Pagrindinė karuselė ───────────────────────────────────────────
+          - name: hero
+            label: Pagrindinė karuselė
+            label_singular: Skaidrė
+            widget: list
+            collapsed: true
+            summary: '{{fields.title}}'
+            fields:
+              - name: type
+                label: Skaidrės tipas
+                widget: select
+                default: image
+                options:
+                  - { label: 'Viena nuotrauka', value: image }
+                  - { label: 'Koliažas (3 nuotraukos)', value: collage }
+              - name: image
+                label: 'Nuotrauka (kai tipas — viena nuotrauka)'
+                widget: image
+                required: false
+              - name: alt
+                label: 'Nuotraukos aprašymas (alt)'
+                widget: string
+                required: false
+              - name: images
+                label: 'Koliažo nuotraukos (kai tipas — koliažas)'
+                widget: list
+                required: false
+                fields:
+                  - { name: image, label: Nuotrauka, widget: image }
+                  - { name: alt, label: 'Aprašymas (alt)', widget: string }
+              - { name: link, label: 'Nuoroda (kur veda paspaudus)', widget: string }
+              - { name: title, label: Antraštė, widget: string }
+              - { name: subtitle, label: Paantraštė, widget: string }
+              - name: variant
+                label: Spalvų variantas
+                widget: select
+                required: false
+                default: ''
+                options:
+                  - { label: Numatytasis, value: '' }
+                  - { label: 'LMS (raudonas perėjimas)', value: lms }
+                  - { label: 'Business Kids (mėlynas)', value: business }
+              - name: badges
+                label: 'STEAM ženkliukai (nebūtina)'
+                widget: list
+                required: false
+                fields:
+                  - { name: image, label: Ženkliukas, widget: image }
+                  - { name: alt, label: 'Aprašymas (alt)', widget: string }
+
+          # ── Stovyklų kortelės ─────────────────────────────────────────────
+          - name: campCards
+            label: Stovyklų kortelės (3 prekės ženklai)
+            label_singular: Kortelė
+            widget: list
+            collapsed: true
+            summary: '{{fields.title}}'
+            fields:
+              - name: brand
+                label: Prekės ženklas
+                widget: select
+                options:
+                  - { label: Bricks4Kidz, value: bricks4kidz }
+                  - { label: 'Little Medical School', value: lms }
+                  - { label: 'Business Kids', value: businesskids }
+              - { name: title, label: Kortelės antraštė, widget: string }
+              - { name: hint, label: Apatinis tekstas, widget: string }
+              - { name: link, label: Nuoroda, widget: string }
+              - { name: logo, label: 'Logotipas (rodomas ant nuotraukų)', widget: image }
+              - { name: logoAlt, label: 'Logotipo aprašymas (alt)', widget: string }
+              - name: logoWide
+                label: 'Platus (horizontalus) logotipas?'
+                widget: boolean
+                default: false
+              - name: interval
+                label: 'Karuselės greitis (ms)'
+                widget: number
+                default: 3000
+                value_type: int
+              - name: images
+                label: Kortelės nuotraukos
+                widget: list
+                fields:
+                  - { name: src, label: Nuotrauka, widget: image }
+                  - { name: alt, label: 'Aprašymas (alt)', widget: string }
+                  - name: fit
+                    label: Nuotraukos talpinimas
+                    widget: select
+                    default: cover
+                    options:
+                      - { label: 'Užpildo rėmelį (cover)', value: cover }
+                      - { label: 'Telpa visa (contain)', value: contain }
+                  - name: bg
+                    label: Fonas po nuotrauka
+                    widget: select
+                    required: false
+                    default: ''
+                    options:
+                      - { label: Numatytasis, value: '' }
+                      - { label: 'Mėlynas perėjimas (Business Kids)', value: bk-shark }
+
+          # ── Privalumai ────────────────────────────────────────────────────
+          - name: benefits
+            label: Privalumų skydeliai
+            widget: object
+            collapsed: true
+            fields:
+              - { name: title, label: Antraštė, widget: string }
+              - name: pills
+                label: Skydeliai
+                label_singular: Skydelis
+                widget: list
+                summary: '{{fields.text}}'
+                fields:
+                  - { name: text, label: Tekstas, widget: string }
+                  - name: color
+                    label: Spalva
+                    widget: select
+                    options:
+                      - { label: Raudona, value: red }
+                      - { label: Mėlyna, value: blue }
+                      - { label: Geltona, value: yellow }
+                      - { label: Žalia, value: green }
+
+          # ── Atsiliepimai ──────────────────────────────────────────────────
+          - name: testimonials
+            label: Atsiliepimai
+            label_singular: Atsiliepimas
+            widget: list
+            collapsed: true
+            summary: '{{fields.author}}'
+            fields:
+              - { name: text, label: Atsiliepimo tekstas, widget: text }
+              - { name: author, label: 'Autorius (pvz. Ingrida P., Vilnius · Google atsiliepimas)', widget: string }
+
+          # ── Kontaktų juosta ───────────────────────────────────────────────
+          - name: contact
+            label: Kontaktų juosta
+            widget: object
+            collapsed: true
+            fields:
+              - { name: label, label: Antraštė, widget: string }
+              - { name: phone, label: 'Telefonas (rodomas)', widget: string }
+              - name: phoneHref
+                label: 'Telefonas nuorodai'
+                widget: string
+                hint: 'Be tarpų, pvz. +37065050556'
+              - { name: email, label: El. paštas, widget: string }
+              - { name: registerLabel, label: 'Mygtuko tekstas', widget: string }
+
+          # ── Akcijos langas ────────────────────────────────────────────────
+          - name: promo
+            label: Akcijos iškylantis langas
+            widget: object
+            collapsed: true
+            fields:
+              - { name: badge, label: 'Ženkliukas (pvz. AKCIJA)', widget: string }
+              - { name: price, label: 'Pagrindinis tekstas (pvz. −20%)', widget: string }
+              - { name: sub, label: Paaiškinimas, widget: string }
+              - { name: cta, label: Mygtuko tekstas, widget: string }
+              - { name: note, label: Apatinė pastaba, widget: string }
+
+          # ── Poraštės prekės ženklai ───────────────────────────────────────
+          - name: brandsFooter
+            label: Poraštės prekės ženklai
+            label_singular: Prekės ženklas
+            widget: list
+            collapsed: true
+            fields:
+              - { name: logo, label: Logotipas, widget: image }
+              - { name: logoAlt, label: 'Aprašymas (alt)', widget: string }
+              - { name: link, label: Nuoroda, widget: string }
+              - name: socials
+                label: Socialiniai tinklai
+                label_singular: Socialinis tinklas
+                widget: list
+                summary: '{{fields.platform}}'
+                fields:
+                  - name: platform
+                    label: Tinklas
+                    widget: select
+                    options:
+                      - { label: Facebook, value: facebook }
+                      - { label: Instagram, value: instagram }
+                      - { label: TikTok, value: tiktok }
+                  - { name: url, label: Nuoroda, widget: string }

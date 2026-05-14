@@ -1,4 +1,5 @@
 import campsData from './data/camps.json';
+import siteContent from './data/content.json';
 
 (() => {
   const prefersReduced = () => {
@@ -321,6 +322,12 @@ import campsData from './data/camps.json';
       if (sessionStorage.getItem('promoDismissed') === '1') return;
     } catch {}
 
+    // Promo text comes from the CMS-managed src/data/content.json.
+    const promo = (siteContent && siteContent.promo) || {};
+    const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => (
+      { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]
+    ));
+
     const popup = document.createElement('div');
     popup.className = 'promo-popup';
     popup.id = 'promoPopup';
@@ -329,13 +336,13 @@ import campsData from './data/camps.json';
       <div class="promo-popup-backdrop"></div>
       <div class="promo-popup-box" role="dialog" aria-modal="true" aria-labelledby="promoTitle">
         <button class="promo-popup-close" aria-label="Uždaryti">×</button>
-        <div class="promo-popup-badge">AKCIJA</div>
-        <div class="promo-popup-price" id="promoTitle">−20%</div>
-        <div class="promo-popup-sub">iki birželio 1 d.</div>
+        <div class="promo-popup-badge">${esc(promo.badge)}</div>
+        <div class="promo-popup-price" id="promoTitle">${esc(promo.price)}</div>
+        <div class="promo-popup-sub">${esc(promo.sub)}</div>
         <div class="promo-popup-cta-wrap">
-          <a href="#registracija" class="promo-popup-cta" id="promoCta">Registruokis dabar</a>
+          <a href="#registracija" class="promo-popup-cta" id="promoCta">${esc(promo.cta)}</a>
         </div>
-        <div class="promo-popup-note">Vietų skaičius ribotas</div>
+        <div class="promo-popup-note">${esc(promo.note)}</div>
       </div>
     `;
     document.body.appendChild(popup);

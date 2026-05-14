@@ -73,11 +73,38 @@ Commit'ink pakeitimą — Cloudflare Pages automatiškai perstatys svetainę.
 1. Eik į **https://topstovyklos.lt/admin/**
 2. Paspausk **Sign in with GitHub**
 3. Patvirtink prieigą
-4. Pamatysi „Stovyklos" → „Visų stovyklų sąrašas" — ten redaguojami
-   prekės ženklai, miestai ir visos stovyklų datos
+4. Pamatysi „Stovyklos" ir „Svetainės turinys" — ten redaguojami
+   prekės ženklai, miestai, stovyklų datos, nuotraukos, tekstai ir kt.
 
 Kiekvienas išsaugojimas sukuria git commit'ą ir per 1–2 minutes
 svetainė atsinaujina automatiškai.
+
+---
+
+## 5. Pridėti klientą kaip redaktorių (su jo paties GitHub paskyra)
+
+Klientui **nereikia** jūsų GitHub paskyros. Sveltia CMS leidžia prisijungti
+bet kuriam GitHub naudotojui, turinčiam **rašymo teisę** šiame repozitorijuje.
+OAuth programėlė (1 žingsnis) yra bendra — ji nepririšta prie konkretaus žmogaus.
+
+Žingsniai:
+
+1. Klientas susikuria nemokamą **GitHub paskyrą** (https://github.com/signup),
+   jei dar neturi.
+2. Repozitorijaus savininkas eina į
+   **GitHub → `gaurilgustas284-wq/Stovyklos` → Settings → Collaborators →
+   Add people**, įveda kliento GitHub vardą ir suteikia **Write** rolę.
+3. Klientas priima pakvietimą (gauna jį el. paštu arba
+   github.com/notifications).
+4. Klientas eina į **https://topstovyklos.lt/admin/**, jungiasi **savo**
+   GitHub paskyra — viskas.
+
+Pastabos:
+- Kiekvienas pakeitimas bus pažymėtas kliento GitHub vardu (aišku, kas ką keitė).
+- Norint atimti prieigą — tiesiog pašalink jį iš Collaborators sąrašo.
+- Galima pridėti kelis redaktorius tuo pačiu būdu.
+- `Write` rolė reiškia, kad klientas techniškai gali matyti visą repozitoriją
+  GitHub'e, bet praktiškai jis naudosis tik /admin/ sąsaja.
 
 ---
 
