@@ -12,11 +12,8 @@ backend:
   branch: main
   # Cloudflare Worker, tvarkantis GitHub prisijungimą. KOL KAS PLACEHOLDER —
   # pakeiskite į savo worker adresą pagal ADMIN-SETUP.md instrukciją.
+  # (Lokaliam testavimui Chrome/Edge naršyklėje šito nereikia.)
   base_url: https://REIKIA-PAKEISTI.workers.dev
-
-# Leidžia testuoti CMS lokaliai (npm run dev + Sveltia proxy serveris).
-# Produkcijoje (topstovyklos.lt) ši eilutė įtakos neturi.
-local_backend: true
 
 site_url: https://topstovyklos.lt
 display_url: https://topstovyklos.lt

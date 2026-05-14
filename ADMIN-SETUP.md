@@ -81,17 +81,27 @@ svetainė atsinaujina automatiškai.
 
 ---
 
-## Testavimas lokaliai (nebūtina)
+## Testavimas lokaliai (nebūtina, bet patogu)
 
-Norint išbandyti CMS prieš nustatant prisijungimą:
+Sveltia CMS lokaliai veikia **be jokio proxy serverio** — naudoja naršyklės
+File System Access API ir rašo tiesiai į failus diske.
 
-```bash
-npm run dev                          # 1 terminale — svetainė
-npx @sveltia/cms-proxy-server        # 2 terminale — vietinis proxy
-```
+**Reikia Chromium naršyklės** (Chrome, Edge arba Brave — Firefox / Safari
+File System Access API nepalaiko).
 
-Tada atidaryk http://localhost:5173/admin/ — `local_backend: true` nustatymas
-leis redaguoti failus tiesiai diske be GitHub prisijungimo.
+1. Paleisk svetainę:
+   ```bash
+   npm run dev
+   ```
+2. Chrome arba Edge naršyklėje atidaryk **http://localhost:5173/admin/index.html**
+3. Paspausk **„Work with Local Repository"** ir pasirink projekto aplanką
+   (`...\newone\Stovyklos`)
+4. Redaguok turinį — pakeitimai rašomi tiesiai į `src/data/camps.json`
+5. Peržiūrėk http://localhost:5173/
+6. Kai patenkintas — `git add`, `git commit`, `git push` įprastai
+
+Prisijungimo (GitHub OAuth) lokaliam testavimui **nereikia** — jis būtinas
+tik produkcijoje (topstovyklos.lt/admin/).
 
 ---
 
