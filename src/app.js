@@ -1,3 +1,5 @@
+import campsData from './data/camps.json';
+
 (() => {
   const prefersReduced = () => {
     try {
@@ -176,302 +178,35 @@
     }
   }
 
-  // ── CAMP DATA (city-indexed, from CSV schedule) ─────────────────────────────
-  // Structure: CAMP_DATA[campKey][cityKey] = ['Theme name – Date', ...]
-  const CAMP_DATA = {
-    bricks4kidz: {
-      kaunas: [
-        'Žaidimų Pasaulis (5–9 m.) – Birželio 15-19 d.',
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 13-17 d.',
-        'Žaidimų Pasaulis (5–9 m.) – Rugpjūčio 10-14 d. (4 dienos)',
-        'Minecraft Manija (5–9 m.) – Birželio 8-12 d.',
-        'Minecraft Manija (5–9 m.) – Liepos 20-24 d.',
-        'Minecraft Manija (5–9 m.) – Rugpjūčio 3-7 d.',
-        'LEGO® Detektyvas (5–9 m.) – Birželio 29–liepos 3 d.',
-        'LEGO® Detektyvas (5–9 m.) – Liepos 27-31 d.',
-        'LEGO® Meistrai (5–9 m.) – Birželio 22-26 d. (4 dienos)',
-        'LEGO® Meistrai (5–9 m.) – Rugpjūčio 24-28 d.',
-        'Robotikos Nuotykiai (5–9 m.) – Liepos 7-11 d. (4 dienos)',
-        'Robotikos Nuotykiai (5–9 m.) – Rugpjūčio 17-21 d.',
-        'Ateities Išradėjai (9–12 m.) – Birželio 15-19 d.',
-        'Ateities Išradėjai (9–12 m.) – Liepos 13-17 d.',
-        'Ateities Išradėjai (9–12 m.) – Liepos 27-31 d.',
-        'Ateities Išradėjai (9–12 m.) – Rugpjūčio 17-21 d.',
-        'Keliauk su LEGO aplink pasaulį (3–5,5 m.) – Birželio 29–liepos 3 d.',
-        'Keliauk su LEGO aplink pasaulį (3–5,5 m.) – Liepos 27-31 d.',
-        'Keliauk su LEGO aplink pasaulį (3–5,5 m.) – Rugpjūčio 24-28 d.',
-        'Magiška LEGO® stovykla (3–5,5 m.) – Liepos 7-11 d. (4 dienos)',
-        'Magiška LEGO® stovykla (3–5,5 m.) – Rugpjūčio 3-7 d.',
-        'Zoologijos sodas su LEGO® (3–5,5 m.) – Liepos 13-17 d.',
-        'Zoologijos sodas su LEGO® (3–5,5 m.) – Rugpjūčio 10-14 d. (4 dienos)',
-        'Superherojų nuotykiai (3–5,5 m.) – Liepos 20-24 d.',
-        'Superherojų nuotykiai (3–5,5 m.) – Rugpjūčio 17-21 d.',
-      ],
-      vilnius_zverynas: [
-        'Žaidimų Pasaulis (5–9 m.) – Birželio 15-19 d.',
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 27-31 d.',
-        'Žaidimų Pasaulis (5–9 m.) – Rugpjūčio 24-28 d.',
-        'Minecraft Manija (5–9 m.) – Birželio 8-12 d.',
-        'Minecraft Manija (5–9 m.) – Liepos 7-11 d. (4 dienos)',
-        'Minecraft Manija (5–9 m.) – Rugpjūčio 17-21 d.',
-        'LEGO® Detektyvas (5–9 m.) – Birželio 29–liepos 3 d.',
-        'LEGO® Detektyvas (5–9 m.) – Liepos 20-24 d.',
-        'LEGO® Detektyvas (5–9 m.) – Rugpjūčio 3-7 d.',
-        'LEGO® Meistrai (5–9 m.) – Birželio 22-26 d. (4 dienos)',
-        'LEGO® Meistrai (5–9 m.) – Rugpjūčio 10-14 d. (4 dienos)',
-        'Robotikos Nuotykiai (5–9 m.) – Liepos 13-17 d.',
-        'Ateities Išradėjai (9–12 m.) – Liepos 13-17 d.',
-      ],
-      vilnius_gabijos: [
-        'Žaidimų Pasaulis (5–9 m.) – Birželio 8-12 d.',
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 7-11 d. (4 dienos)',
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 27-31 d.',
-        'Minecraft Manija (5–9 m.) – Birželio 15-19 d.',
-        'Minecraft Manija (5–9 m.) – Rugpjūčio 3-7 d.',
-        'Minecraft Manija (5–9 m.) – Rugpjūčio 24-28 d.',
-        'LEGO® Detektyvas (5–9 m.) – Liepos 13-17 d.',
-        'LEGO® Detektyvas (5–9 m.) – Rugpjūčio 10-14 d. (4 dienos)',
-        'LEGO® Meistrai (5–9 m.) – Birželio 29–liepos 3 d.',
-        'LEGO® Meistrai (5–9 m.) – Rugpjūčio 17-21 d.',
-        'Robotikos Nuotykiai (5–9 m.) – Birželio 22-26 d. (4 dienos)',
-        'Robotikos Nuotykiai (5–9 m.) – Liepos 20-24 d.',
-        'Ateities Išradėjai (9–12 m.) – Liepos 7-11 d. (4 dienos)',
-        'Ateities Išradėjai (9–12 m.) – Liepos 20-24 d.',
-      ],
-      klaipeda: [
-        'Žaidimų Pasaulis (5–9 m.) – Birželio 15-19 d.',
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 13-17 d.',
-        'Žaidimų Pasaulis (5–9 m.) – Rugpjūčio 17-21 d.',
-        'Minecraft Manija (5–9 m.) – Birželio 8-12 d.',
-        'Minecraft Manija (5–9 m.) – Liepos 20-24 d.',
-        'LEGO® Detektyvas (5–9 m.) – Liepos 7-11 d. (4 dienos)',
-        'LEGO® Detektyvas (5–9 m.) – Rugpjūčio 3-7 d.',
-        'LEGO® Meistrai (5–9 m.) – Birželio 22-26 d. (4 dienos)',
-        'LEGO® Meistrai (5–9 m.) – Liepos 27-31 d.',
-        'LEGO® Meistrai (5–9 m.) – Rugpjūčio 10-14 d. (4 dienos)',
-        'Robotikos Nuotykiai (5–9 m.) – Birželio 29–liepos 3 d.',
-        'Robotikos Nuotykiai (5–9 m.) – Rugpjūčio 24-28 d.',
-        'Ateities Išradėjai (9–12 m.) – Birželio 29–liepos 3 d.',
-        'Ateities Išradėjai (9–12 m.) – Liepos 13-17 d.',
-      ],
-      palanga: [
-        'Žaidimų Pasaulis (5–9 m.) – Birželio 29–liepos 3 d.',
-        'Minecraft Manija (5–9 m.) – Liepos 13-17 d.',
-        'LEGO® Detektyvas (5–9 m.) – Liepos 27-31 d.',
-      ],
-      kretinga: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 20-24 d.',
-      ],
-      gargzdai: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 13-17 d.',
-      ],
-      silute: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 27-31 d.',
-      ],
-      nida: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 20-24 d.',
-        'Minecraft Manija (5–9 m.) – Liepos 27-31 d.',
-        'LEGO® Detektyvas (5–9 m.) – Rugpjūčio 3-7 d.',
-      ],
-      mazeikiai: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 27-31 d.',
-      ],
-      plunge: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 13-17 d.',
-      ],
-      telsiai: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 20-24 d.',
-      ],
-      kedainiai: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 27-31 d.',
-      ],
-      alytus: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 7-11 d. (4 dienos)',
-        'Minecraft Manija (5–9 m.) – Liepos 20-24 d.',
-      ],
-      marijampole: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 7-11 d. (4 dienos)',
-        'Minecraft Manija (5–9 m.) – Liepos 20-24 d.',
-        'LEGO® Detektyvas (5–9 m.) – Rugpjūčio 3-7 d.',
-      ],
-      panevezys: [
-        'Žaidimų Pasaulis (5–9 m.) – Birželio 8-12 d.',
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 13-17 d.',
-        'Žaidimų Pasaulis (5–9 m.) – Rugpjūčio 3-7 d.',
-        'Minecraft Manija (5–9 m.) – Birželio 22-26 d. (4 dienos)',
-        'Minecraft Manija (5–9 m.) – Liepos 20-24 d.',
-        'Minecraft Manija (5–9 m.) – Rugpjūčio 24-28 d.',
-        'LEGO® Detektyvas (5–9 m.) – Birželio 15-19 d.',
-        'LEGO® Detektyvas (5–9 m.) – Rugpjūčio 10-14 d. (4 dienos)',
-        'LEGO® Meistrai (5–9 m.) – Liepos 7-11 d. (4 dienos)',
-        'LEGO® Meistrai (5–9 m.) – Rugpjūčio 17-21 d.',
-        'Robotikos Nuotykiai (5–9 m.) – Birželio 29–liepos 3 d.',
-        'Ateities Išradėjai (9–12 m.) – Liepos 13-17 d.',
-        'Ateities Išradėjai (9–12 m.) – Rugpjūčio 3-7 d.',
-      ],
-      siauliai: [
-        'Žaidimų Pasaulis (5–9 m.) – Liepos 20-24 d.',
-      ],
-    },
+  // ── CAMP DATA — built from the CMS-managed src/data/camps.json ─────────────
+  // Edited via /admin (Sveltia CMS). Shape consumed below: CAMP_DATA[brand][city]
+  // = ['Theme – Date', ...] — same as before, just sourced from JSON now.
+  const CAMP_DATA = (() => {
+    const out = {};
+    for (const s of (campsData.sessions || [])) {
+      if (!s || !s.brand || !s.city) continue;
+      if (!out[s.brand]) out[s.brand] = {};
+      if (!out[s.brand][s.city]) out[s.brand][s.city] = [];
+      out[s.brand][s.city].push(s.date ? `${s.theme} – ${s.date}` : s.theme);
+    }
+    return out;
+  })();
 
-    lms: {
-      kaunas: [
-        'Jaunasis Veterinaras (7–12 m.) – Birželio 15-19 d.',
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-        'Jaunasis Veterinaras (7–12 m.) – Rugpjūčio 17-21 d.',
-        'Zoologijos sodo veterinaras (7–12 m.) – Birželio 29–liepos 3 d.',
-        'Zoologijos sodo veterinaras (7–12 m.) – Liepos 27-31 d.',
-        'Pažink medikų profesijas (7–12 m.) – Liepos 7-11 d.',
-        'Pažink medikų profesijas (7–12 m.) – Rugpjūčio 10-14 d.',
-        'Išgyvenimo medicina (7–12 m.) – Birželio 8-12 d.',
-        'Išgyvenimo medicina (7–12 m.) – Rugpjūčio 3-7 d.',
-        'Medicinos detektyvas (7–12 m.) – Birželio 22-26 d.',
-        'Medicinos detektyvas (7–12 m.) – Liepos 20-24 d.',
-        'Medicinos įvadas jaunimui (12–16 m.) – Liepos 20-24 d.',
-        'Mažasis veterinaras (5–7 m.) – Liepos 13-17 d.',
-        'Mažasis veterinaras (5–7 m.) – Liepos 27-31 d.',
-        'Mažasis veterinaras (5–7 m.) – Rugpjūčio 17-21 d.',
-        'Mažasis gydytojas (5–7 m.) – Liepos 7-11 d.',
-        'Mažasis gydytojas (5–7 m.) – Rugpjūčio 10-14 d.',
-      ],
-      vilnius_zverynas: [
-        'Jaunasis Veterinaras (7–12 m.) – Birželio 8-12 d.',
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-        'Zoologijos sodo veterinaras (7–12 m.) – Birželio 29–liepos 3 d.',
-        'Zoologijos sodo veterinaras (7–12 m.) – Rugpjūčio 3-7 d.',
-        'Pažink medikų profesijas (7–12 m.) – Birželio 15-19 d.',
-        'Pažink medikų profesijas (7–12 m.) – Liepos 7-11 d.',
-        'Pažink medikų profesijas (7–12 m.) – Liepos 20-24 d.',
-        'Išgyvenimo medicina (7–12 m.) – Birželio 22-26 d.',
-        'Išgyvenimo medicina (7–12 m.) – Rugpjūčio 17-21 d.',
-        'Medicinos detektyvas (7–12 m.) – Liepos 27-31 d.',
-        'Medicinos detektyvas (7–12 m.) – Rugpjūčio 10-14 d.',
-        'Medicinos įvadas jaunimui (12–16 m.) – Liepos 20-24 d.',
-        'Mažasis veterinaras (5–7 m.) – Liepos 13-17 d.',
-        'Mažasis veterinaras (5–7 m.) – Rugpjūčio 3-7 d.',
-        'Mažasis gydytojas (5–7 m.) – Liepos 7-11 d.',
-      ],
-      vilnius_gabijos: [
-        'Jaunasis Veterinaras (7–12 m.) – Birželio 15-19 d.',
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 7-11 d.',
-        'Zoologijos sodo veterinaras (7–12 m.) – Liepos 27-31 d.',
-        'Zoologijos sodo veterinaras (7–12 m.) – Rugpjūčio 17-21 d.',
-        'Pažink medikų profesijas (7–12 m.) – Birželio 8-12 d.',
-        'Pažink medikų profesijas (7–12 m.) – Rugpjūčio 10-14 d.',
-        'Išgyvenimo medicina (7–12 m.) – Liepos 13-17 d.',
-        'Išgyvenimo medicina (7–12 m.) – Rugpjūčio 3-7 d.',
-        'Medicinos detektyvas (7–12 m.) – Birželio 29–liepos 3 d.',
-        'Medicinos detektyvas (7–12 m.) – Liepos 20-24 d.',
-        'Mažasis veterinaras (5–7 m.) – Liepos 7-11 d.',
-        'Mažasis veterinaras (5–7 m.) – Liepos 27-31 d.',
-        'Mažasis veterinaras (5–7 m.) – Rugpjūčio 17-21 d.',
-        'Mažasis gydytojas (5–7 m.) – Rugpjūčio 10-14 d.',
-      ],
-      klaipeda: [
-        'Jaunasis Veterinaras (7–12 m.) – Birželio 15-19 d.',
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-        'Jaunasis Veterinaras (7–12 m.) – Rugpjūčio 17-21 d.',
-        'Zoologijos sodo veterinaras (7–12 m.) – Rugpjūčio 3-7 d.',
-        'Pažink medikų profesijas (7–12 m.) – Birželio 29–liepos 3 d.',
-        'Pažink medikų profesijas (7–12 m.) – Liepos 27-31 d.',
-        'Išgyvenimo medicina (7–12 m.) – Liepos 7-11 d.',
-        'Išgyvenimo medicina (7–12 m.) – Liepos 20-24 d.',
-        'Jūros gelmių tyrinėtojas (7–12 m.) – Birželio 8-12 d.',
-        'Medicinos detektyvas (7–12 m.) – Birželio 22-26 d.',
-        'Medicinos detektyvas (7–12 m.) – Rugpjūčio 10-14 d.',
-        'Medicinos įvadas jaunimui (12–16 m.) – Liepos 27-31 d.',
-        'Mažasis veterinaras (5–7 m.) – Liepos 13-17 d.',
-        'Mažasis veterinaras (5–7 m.) – Rugpjūčio 3-7 d.',
-        'Mažasis veterinaras (5–7 m.) – Rugpjūčio 17-21 d.',
-        'Mažasis gydytojas (5–7 m.) – Birželio 29–liepos 3 d.',
-      ],
-      palanga: [
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 7-11 d.',
-        'Išgyvenimo medicina (7–12 m.) – Liepos 20-24 d.',
-        'Jūros gelmių tyrinėtojas (7–12 m.) – Rugpjūčio 3-7 d.',
-      ],
-      gargzdai: [
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-        'Medicinos detektyvas (7–12 m.) – Rugpjūčio 3-7 d.',
-      ],
-      silute: [
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-      ],
-      kretinga: [
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 27-31 d.',
-      ],
-      mazeikiai: [
-        'Jaunasis Veterinaras (7–12 m.) – Rugpjūčio 3-7 d.',
-      ],
-      plunge: [
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 20-24 d.',
-      ],
-      telsiai: [
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-      ],
-      panevezys: [
-        'Jaunasis Veterinaras (7–12 m.) – Birželio 15-19 d.',
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-        'Jaunasis Veterinaras (7–12 m.) – Rugpjūčio 3-7 d.',
-        'Zoologijos sodo veterinaras (7–12 m.) – Rugpjūčio 10-14 d.',
-        'Pažink medikų profesijas (7–12 m.) – Liepos 7-11 d.',
-        'Pažink medikų profesijas (7–12 m.) – Liepos 27-31 d.',
-        'Išgyvenimo medicina (7–12 m.) – Liepos 20-24 d.',
-        'Medicinos detektyvas (7–12 m.) – Birželio 29–liepos 3 d.',
-        'Medicinos detektyvas (7–12 m.) – Rugpjūčio 17-21 d.',
-        'Medicinos įvadas jaunimui (12–16 m.) – Liepos 27-31 d.',
-        'Mažasis veterinaras (5–7 m.) – Liepos 13-17 d.',
-        'Mažasis veterinaras (5–7 m.) – Rugpjūčio 3-7 d.',
-        'Mažasis veterinaras (5–7 m.) – Rugpjūčio 10-14 d.',
-        'Mažasis gydytojas (5–7 m.) – Liepos 7-11 d.',
-      ],
-      siauliai: [
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-        'Medicinos detektyvas (7–12 m.) – Liepos 27-31 d.',
-      ],
-      alytus: [
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-        'Pažink medikų profesijas (7–12 m.) – Liepos 27-31 d.',
-        'Medicinos detektyvas (7–12 m.) – Rugpjūčio 3-7 d.',
-      ],
-      marijampole: [
-        'Jaunasis Veterinaras (7–12 m.) – Birželio 29–liepos 3 d.',
-        'Pažink medikų profesijas (7–12 m.) – Liepos 13-17 d.',
-        'Medicinos detektyvas (7–12 m.) – Liepos 27-31 d.',
-      ],
-      kedainiai: [
-        'Jaunasis Veterinaras (7–12 m.) – Rugpjūčio 3-7 d.',
-      ],
-      utena: [
-        'Jaunasis Veterinaras (7–12 m.) – Liepos 13-17 d.',
-        'Pažink medikų profesijas (7–12 m.) – Liepos 27-31 d.',
-      ],
-    },
-
-    businesskids: {
-      kaunas: [
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Birželio 29–liepos 3 d.',
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Liepos 20-24 d.',
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Rugpjūčio 3-7 d.',
-      ],
-      vilnius_zverynas: [
-        'Jaunųjų verslo ryklių stovykla – Liepos 20-24 d.',
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Rugpjūčio 3-7 d.',
-      ],
-      vilnius_gabijos: [
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Birželio 29–liepos 3 d.',
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Liepos 13-17 d.',
-      ],
-      klaipeda: [
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Liepos 20-24 d.',
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Rugpjūčio 3-7 d.',
-      ],
-      panevezys: [
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Birželio 29–liepos 3 d.',
-        'Jaunųjų verslo ryklių stovykla (9–12 m.) – Liepos 27-31 d.',
-      ],
-    },
-  };
+  // ── POPULATE CAMP + CITY SELECTS FROM CMS DATA ─────────────────────────────
+  // The reg-form camp/city dropdowns are filled from camps.json so adding a
+  // brand or city in the CMS flows straight through to the form.
+  function populateCampCitySelects() {
+    const campSel = document.getElementById('camp');
+    const citySel = document.getElementById('city');
+    if (campSel && Array.isArray(campsData.brands) && campsData.brands.length) {
+      campSel.innerHTML = '<option value="">Pasirinkite stovyklą</option>' +
+        campsData.brands.map((b) => `<option value="${b.key}">${b.label}</option>`).join('');
+    }
+    if (citySel && Array.isArray(campsData.cities) && campsData.cities.length) {
+      citySel.innerHTML = '<option value="">Pasirinkite miestą</option>' +
+        campsData.cities.map((c) => `<option value="${c.key}">${c.label}</option>`).join('');
+    }
+  }
 
   // ── CAMP THEME DYNAMIC (camp+city → themes → dates) ────────────────────────
   function initCampThemeDynamic() {
@@ -676,6 +411,7 @@
     document.querySelectorAll('.carousel').forEach((el) => new SimpleCarousel(el));
 
     initRegRoute();
+    populateCampCitySelects();
     initCampThemeDynamic();
     initRegForm();
     initPromoPopup();

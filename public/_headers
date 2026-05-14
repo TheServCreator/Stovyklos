@@ -21,3 +21,7 @@
   Cache-Control: public, max-age=0, must-revalidate
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
+
+# Sveltia CMS admin — keep it out of search indexes
+/admin/*
+  X-Robots-Tag: noindex

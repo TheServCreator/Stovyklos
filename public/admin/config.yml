@@ -1,0 +1,112 @@
+# ───────────────────────────────────────────────────────────────────────────
+# Sveltia CMS — Top Stovyklos turinio valdymas
+# Dokumentacija: https://github.com/sveltia/sveltia-cms
+#
+# Prisijungti gali tik GitHub paskyra, turinti prieigą prie repo žemiau.
+# OAuth tarpinio serverio (base_url) nustatymas — žr. ADMIN-SETUP.md.
+# ───────────────────────────────────────────────────────────────────────────
+
+backend:
+  name: github
+  repo: gaurilgustas284-wq/Stovyklos
+  branch: main
+  # Cloudflare Worker, tvarkantis GitHub prisijungimą. KOL KAS PLACEHOLDER —
+  # pakeiskite į savo worker adresą pagal ADMIN-SETUP.md instrukciją.
+  base_url: https://REIKIA-PAKEISTI.workers.dev
+
+# Leidžia testuoti CMS lokaliai (npm run dev + Sveltia proxy serveris).
+# Produkcijoje (topstovyklos.lt) ši eilutė įtakos neturi.
+local_backend: true
+
+site_url: https://topstovyklos.lt
+display_url: https://topstovyklos.lt
+
+# Įkeltų failų vieta — naudojama vėlesniam etapui (karuselių nuotraukos, logotipai).
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  # ── STOVYKLOS ────────────────────────────────────────────────────────────
+  - name: camps
+    label: Stovyklos
+    label_singular: Stovyklų duomenys
+    files:
+      - name: camps_list
+        label: Visų stovyklų sąrašas
+        file: src/data/camps.json
+        description: >-
+          Čia valdoma visa stovyklų informacija: prekės ženklai, miestai su
+          adresais ir konkrečios stovyklų datos. Išsaugojus pakeitimus,
+          svetainė automatiškai atsinaujins per 1–2 minutes.
+        fields:
+          # ── Prekės ženklai ────────────────────────────────────────────────
+          - name: brands
+            label: Prekės ženklai (stovyklų tipai)
+            label_singular: Prekės ženklas
+            widget: list
+            collapsed: true
+            summary: '{{fields.label}}'
+            fields:
+              - name: key
+                label: Sistemos raktas — NEKEISTI
+                widget: string
+                hint: >-
+                  Techninis identifikatorius (pvz. bricks4kidz). Keičiant suges
+                  registracijos forma. Pridedant naują — naudokite tik mažąsias
+                  raides be tarpų ir lietuviškų raidžių.
+              - name: label
+                label: Rodomas pavadinimas
+                widget: string
+                hint: 'Kaip matoma registracijos formoje, pvz. 🔵 Bricks4Kidz'
+
+          # ── Miestai ───────────────────────────────────────────────────────
+          - name: cities
+            label: Miestai ir adresai
+            label_singular: Miestas
+            widget: list
+            collapsed: true
+            summary: '{{fields.label}}'
+            fields:
+              - name: key
+                label: Sistemos raktas — NEKEISTI
+                widget: string
+                hint: >-
+                  Techninis identifikatorius (pvz. kaunas). Keičiant suges
+                  esamos stovyklų datos. Pridedant naują — naudokite tik
+                  mažąsias raides be tarpų ir lietuviškų raidžių.
+              - name: label
+                label: Miestas ir adresas
+                widget: string
+                hint: 'pvz. Kaunas – Savanorių pr. 130'
+
+          # ── Stovyklų datos (pagrindinis sąrašas) ──────────────────────────
+          - name: sessions
+            label: Stovyklų datos
+            label_singular: Stovykla
+            widget: list
+            summary: '{{fields.theme}} — {{fields.date}}  ·  {{fields.brand}} / {{fields.city}}'
+            fields:
+              - name: brand
+                label: Stovykla (prekės ženklas)
+                widget: relation
+                collection: camps
+                file: camps_list
+                value_field: 'brands.*.key'
+                display_fields: ['brands.*.label']
+                search_fields: ['brands.*.label']
+              - name: city
+                label: Miestas
+                widget: relation
+                collection: camps
+                file: camps_list
+                value_field: 'cities.*.key'
+                display_fields: ['cities.*.label']
+                search_fields: ['cities.*.label']
+              - name: theme
+                label: Tema (programa)
+                widget: string
+                hint: 'pvz. Žaidimų Pasaulis (5–9 m.)'
+              - name: date
+                label: Data
+                widget: string
+                hint: 'pvz. Birželio 15-19 d.'

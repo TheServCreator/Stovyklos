@@ -1,0 +1,1328 @@
+{
+  "brands": [
+    {
+      "key": "bricks4kidz",
+      "label": "🔵 Bricks4Kidz"
+    },
+    {
+      "key": "lms",
+      "label": "🔴 Little Medical School"
+    },
+    {
+      "key": "businesskids",
+      "label": "🟡 Business Kids"
+    }
+  ],
+  "cities": [
+    {
+      "key": "kaunas",
+      "label": "Kaunas – Savanorių pr. 130"
+    },
+    {
+      "key": "vilnius_zverynas",
+      "label": "Vilnius Žvėrynas – Sakalų g. 6"
+    },
+    {
+      "key": "vilnius_gabijos",
+      "label": "Vilnius Pasilaičiai – Gabijos g. 40"
+    },
+    {
+      "key": "klaipeda",
+      "label": "Klaipėda – Karkų g. 17-1"
+    },
+    {
+      "key": "palanga",
+      "label": "Palanga – Meilės al. 11"
+    },
+    {
+      "key": "kretinga",
+      "label": "Kretinga – J. Pabrėžos g. 8"
+    },
+    {
+      "key": "gargzdai",
+      "label": "Gargždai – Kvietinių g. 2"
+    },
+    {
+      "key": "silute",
+      "label": "Šilutė – K. Kalinausko g. 2"
+    },
+    {
+      "key": "nida",
+      "label": "Nida – Taikos g. 11-2"
+    },
+    {
+      "key": "mazeikiai",
+      "label": "Mažeikiai – Sedos g. 12"
+    },
+    {
+      "key": "plunge",
+      "label": "Plungė – J. Tumo-Vaižganto g. 98"
+    },
+    {
+      "key": "telsiai",
+      "label": "Telšiai – Mašio g. 14"
+    },
+    {
+      "key": "kedainiai",
+      "label": "Kėdainiai – Pirmūnų g. 13a"
+    },
+    {
+      "key": "alytus",
+      "label": "Alytus – Jaunimo g. 1"
+    },
+    {
+      "key": "marijampole",
+      "label": "Marijampolė – Vytauto g. 26"
+    },
+    {
+      "key": "panevezys",
+      "label": "Panevėžys – Respublikos g. 34"
+    },
+    {
+      "key": "siauliai",
+      "label": "Šiauliai – A. Mickevičiaus g. 9"
+    },
+    {
+      "key": "utena",
+      "label": "Utena – J. Basanavičiaus g. 55"
+    }
+  ],
+  "sessions": [
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Rugpjūčio 10-14 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Birželio 8-12 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Birželio 22-26 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Rugpjūčio 24-28 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Robotikos Nuotykiai (5–9 m.)",
+      "date": "Liepos 7-11 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Robotikos Nuotykiai (5–9 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Keliauk su LEGO aplink pasaulį (3–5,5 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Keliauk su LEGO aplink pasaulį (3–5,5 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Keliauk su LEGO aplink pasaulį (3–5,5 m.)",
+      "date": "Rugpjūčio 24-28 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Magiška LEGO® stovykla (3–5,5 m.)",
+      "date": "Liepos 7-11 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Magiška LEGO® stovykla (3–5,5 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Zoologijos sodas su LEGO® (3–5,5 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Zoologijos sodas su LEGO® (3–5,5 m.)",
+      "date": "Rugpjūčio 10-14 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Superherojų nuotykiai (3–5,5 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kaunas",
+      "theme": "Superherojų nuotykiai (3–5,5 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Rugpjūčio 24-28 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Birželio 8-12 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Liepos 7-11 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Birželio 22-26 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Rugpjūčio 10-14 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "Robotikos Nuotykiai (5–9 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_zverynas",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Birželio 8-12 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 7-11 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Rugpjūčio 24-28 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Rugpjūčio 10-14 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Robotikos Nuotykiai (5–9 m.)",
+      "date": "Birželio 22-26 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Robotikos Nuotykiai (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Liepos 7-11 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "vilnius_gabijos",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Birželio 8-12 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Liepos 7-11 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Birželio 22-26 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Rugpjūčio 10-14 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "Robotikos Nuotykiai (5–9 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "Robotikos Nuotykiai (5–9 m.)",
+      "date": "Rugpjūčio 24-28 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "klaipeda",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "palanga",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "palanga",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "palanga",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kretinga",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "gargzdai",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "silute",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "nida",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "nida",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "nida",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "mazeikiai",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "plunge",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "telsiai",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "kedainiai",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "alytus",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 7-11 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "alytus",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "marijampole",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 7-11 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "marijampole",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "marijampole",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Birželio 8-12 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Birželio 22-26 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "Minecraft Manija (5–9 m.)",
+      "date": "Rugpjūčio 24-28 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "LEGO® Detektyvas (5–9 m.)",
+      "date": "Rugpjūčio 10-14 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Liepos 7-11 d. (4 dienos)"
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "LEGO® Meistrai (5–9 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "Robotikos Nuotykiai (5–9 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "panevezys",
+      "theme": "Ateities Išradėjai (9–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "bricks4kidz",
+      "city": "siauliai",
+      "theme": "Žaidimų Pasaulis (5–9 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Zoologijos sodo veterinaras (7–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Zoologijos sodo veterinaras (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Rugpjūčio 10-14 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Birželio 8-12 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Birželio 22-26 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Medicinos įvadas jaunimui (12–16 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Mažasis gydytojas (5–7 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kaunas",
+      "theme": "Mažasis gydytojas (5–7 m.)",
+      "date": "Rugpjūčio 10-14 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Birželio 8-12 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Zoologijos sodo veterinaras (7–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Zoologijos sodo veterinaras (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Birželio 22-26 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Rugpjūčio 10-14 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Medicinos įvadas jaunimui (12–16 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_zverynas",
+      "theme": "Mažasis gydytojas (5–7 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Zoologijos sodo veterinaras (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Zoologijos sodo veterinaras (7–12 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Birželio 8-12 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Rugpjūčio 10-14 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "lms",
+      "city": "vilnius_gabijos",
+      "theme": "Mažasis gydytojas (5–7 m.)",
+      "date": "Rugpjūčio 10-14 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Zoologijos sodo veterinaras (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Jūros gelmių tyrinėtojas (7–12 m.)",
+      "date": "Birželio 8-12 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Birželio 22-26 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Rugpjūčio 10-14 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Medicinos įvadas jaunimui (12–16 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "lms",
+      "city": "klaipeda",
+      "theme": "Mažasis gydytojas (5–7 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "lms",
+      "city": "palanga",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "palanga",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "palanga",
+      "theme": "Jūros gelmių tyrinėtojas (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "gargzdai",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "gargzdai",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "silute",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kretinga",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "mazeikiai",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "plunge",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "telsiai",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Birželio 15-19 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Zoologijos sodo veterinaras (7–12 m.)",
+      "date": "Rugpjūčio 10-14 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Išgyvenimo medicina (7–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Rugpjūčio 17-21 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Medicinos įvadas jaunimui (12–16 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Mažasis veterinaras (5–7 m.)",
+      "date": "Rugpjūčio 10-14 d."
+    },
+    {
+      "brand": "lms",
+      "city": "panevezys",
+      "theme": "Mažasis gydytojas (5–7 m.)",
+      "date": "Liepos 7-11 d."
+    },
+    {
+      "brand": "lms",
+      "city": "siauliai",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "siauliai",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "alytus",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "alytus",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "alytus",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "marijampole",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "lms",
+      "city": "marijampole",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "marijampole",
+      "theme": "Medicinos detektyvas (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "lms",
+      "city": "kedainiai",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "lms",
+      "city": "utena",
+      "theme": "Jaunasis Veterinaras (7–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "lms",
+      "city": "utena",
+      "theme": "Pažink medikų profesijas (7–12 m.)",
+      "date": "Liepos 27-31 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "kaunas",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "kaunas",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "kaunas",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "vilnius_zverynas",
+      "theme": "Jaunųjų verslo ryklių stovykla",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "vilnius_zverynas",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "vilnius_gabijos",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "vilnius_gabijos",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Liepos 13-17 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "klaipeda",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Liepos 20-24 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "klaipeda",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Rugpjūčio 3-7 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "panevezys",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Birželio 29–liepos 3 d."
+    },
+    {
+      "brand": "businesskids",
+      "city": "panevezys",
+      "theme": "Jaunųjų verslo ryklių stovykla (9–12 m.)",
+      "date": "Liepos 27-31 d."
+    }
+  ]
+}
