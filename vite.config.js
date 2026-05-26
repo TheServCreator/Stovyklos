@@ -44,7 +44,7 @@ const SOCIAL = {
 
 // ─── Section renderers ──────────────────────────────────────────────────────
 function renderHeader(h = {}) {
-  const isSteamLogo = String(h.logo || '').endsWith('/STEAM2.webp');
+  const isSteamLogo = String(h.logo || '').endsWith('/STEAM.webp');
   const logoClass = isSteamLogo ? ' header-logo-img--steam' : '';
 
   return `<header class="header" data-reveal style="--d:0ms">
