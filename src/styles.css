@@ -60,7 +60,8 @@ body{margin:0;font-family:'Nunito',Arial,sans-serif;color:#111;overflow-x:hidden
 }
 
 .header-logo{grid-column:1;display:flex;align-items:center;justify-self:start;height:100%;text-decoration:none}
-.header-logo img{height:64px;width:64px;object-fit:contain;display:block;border-radius:8px;background:#fff;padding:4px;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.header-logo-img{height:64px;width:64px;object-fit:contain;display:block;border-radius:8px;background:transparent;padding:0;box-shadow:none}
+.header-logo-img--steam{width:146px;height:104px;border-radius:0;background:transparent;display:block;object-fit:contain}
 
 .header-tagline{grid-column:2;text-align:center}
 .header-tagline-text{
