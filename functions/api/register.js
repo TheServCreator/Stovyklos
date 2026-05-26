@@ -1,4 +1,5 @@
-import { connect } from 'cloudflare:sockets';
+// Delay importing `cloudflare:sockets` until runtime inside `sendMail`
+// to avoid module-load failures in environments that don't support it.
 
 const SMTP_HOST = 'serbentas.serveriai.lt';
 const SMTP_PORT = 465;
@@ -146,6 +147,13 @@ class SmtpReader {
 }
 
 async function sendMail({ host, port, username, password, from, to, replyTo, subject, bodyText }) {
+  let connect;
+  try {
+    ({ connect } = await import('cloudflare:sockets'));
+  } catch (err) {
+    throw new Error('cloudflare:sockets import failed: ' + (err && err.message ? err.message : String(err)));
+  }
+
   const socket = connect({ hostname: host, port }, { secureTransport: 'on' });
   const writer = socket.writable.getWriter();
   const reader = new SmtpReader(socket.readable.getReader());
