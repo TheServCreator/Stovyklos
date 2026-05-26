@@ -50,7 +50,7 @@ function renderHeader(h = {}) {
   return `<header class="header" data-reveal style="--d:0ms">
     <div class="header-inner">
       <a class="header-logo" href="/" aria-label="Top Stovyklos">
-        <img src="${esc(h.logo)}" alt="${esc(h.logoAlt)}" class="header-logo-img${logoClass}" width="80" height="80">
+        <img src="${esc(h.logo)}" alt="${esc(h.logoAlt)}" width="146" height="104">
       </a>
       <div class="header-tagline">
         <span class="header-tagline-text">${esc(h.tagline)}</span>
