@@ -1,27 +1,29 @@
-# Long-cache content-addressable assets (Vite emits hashed filenames)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Long-cache images (URLs are versioned via ?v=N when content changes)
 /b4k/*
   Cache-Control: public, max-age=31536000, immutable
+
 /bk/*
   Cache-Control: public, max-age=31536000, immutable
+
 /lms/*
   Cache-Control: public, max-age=31536000, immutable
+
 /logos/*
   Cache-Control: public, max-age=31536000, immutable
+
 /outdoor/*
   Cache-Control: public, max-age=31536000, immutable
+
 /steam/*
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML and the root: short cache, must revalidate
 /
   Cache-Control: public, max-age=0, must-revalidate
+
 /index.html
   Cache-Control: public, max-age=0, must-revalidate
 
-# Sveltia CMS admin — keep it out of search indexes
 /admin/*
   X-Robots-Tag: noindex
