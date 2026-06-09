@@ -2,7 +2,7 @@
   "header": {
     "logo": "/logos/STEAM.webp",
     "logoAlt": "STEAM Edukacija",
-    "tagline": "RINKIS IŠ DAUGIAU NEI 20 STOVYKLŲ VISOJE LIETUVOJE!",
+    "tagline": "RINKIS IŠ 22 STOVYKLŲ TEMŲ, 214 PAMAINŲ VISOJE LIETUVOJE",
     "taglineSub": "Kas tu būsi šią vasarą? Inžinierius? Gydytojas? Lyderis?",
     "phone": "+370 650 50556",
     "phoneHref": "+37065050556",
@@ -11,7 +11,7 @@
   "hero": [
     {
       "type": "image",
-      "image": "/b4k/b4_hero.webp",
+      "image": "/330345d4-2124-4071-bdc8-bc81b6f39cdb.jpg",
       "alt": "Bricks4Kidz vasaros stovykla",
       "link": "https://www.bricks4kidz.lt/vasaros-stovyklos/",
       "title": "Bricks4Kidz",
@@ -249,7 +249,7 @@
   },
   "promo": {
     "badge": "AKCIJA",
-    "price": "30 EUR",
+    "price": "-30 EUR",
     "sub": "Registruojantis su draugu",
     "cta": "Registruokis dabar",
     "note": "Po 15 EUR kiekvienam"
