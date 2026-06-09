@@ -11,7 +11,7 @@
   "hero": [
     {
       "type": "image",
-      "image": "/330345d4-2124-4071-bdc8-bc81b6f39cdb.jpg",
+      "image": "/a6de578f-7432-4e27-9ff3-a348e52d6291.jpg",
       "alt": "Bricks4Kidz vasaros stovykla",
       "link": "https://www.bricks4kidz.lt/vasaros-stovyklos/",
       "title": "Bricks4Kidz",
@@ -75,6 +75,17 @@
       "title": "Aktyvios veiklos",
       "subtitle": "Pasirinkite aktyvias veiklas ir išvykas su naujais draugais",
       "variant": ""
+    },
+    {
+      "type": "image",
+      "image": "/263bed30-1abf-4d0a-87a7-841332253654.jpg",
+      "alt": "PROFESIONALŪS EDUKATORIAI",
+      "images": [],
+      "link": "https://www.bricks4kidz.lt/",
+      "title": "PROFESIONALŪS EDUKATORIAI",
+      "subtitle": "Patyrusi komanda pasirūpina, kad kiekvienas vaikas jaustųsi saugus, pastebėtas ir įkvėptas.",
+      "variant": "",
+      "badges": []
     }
   ],
   "campCards": [
