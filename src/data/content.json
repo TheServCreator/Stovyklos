@@ -45,92 +45,200 @@
       "subtitle": "Konstruojame, koduojame, eksperimentuojame",
       "variant": "",
       "badges": [
-        { "image": "/steam/stemorg.webp", "alt": "STEM.ORG Accredited" },
-        { "image": "/steam/beststem.webp", "alt": "Best in STEM" }
+        {
+          "image": "/steam/stemorg.webp",
+          "alt": "STEM.ORG Accredited"
+        },
+        {
+          "image": "/steam/beststem.webp",
+          "alt": "Best in STEM"
+        }
       ]
     },
     {
       "type": "collage",
+      "images": [
+        {
+          "image": "/outdoor/outdoor-05.webp",
+          "alt": "Aktyvios veiklos lauke"
+        },
+        {
+          "image": "/outdoor/outdoor-08.webp",
+          "alt": "Komandinis darbas"
+        },
+        {
+          "image": "/outdoor/outdoor-15.webp",
+          "alt": "Išvykos"
+        }
+      ],
       "link": "https://www.bricks4kidz.lt/vasaros-stovyklos/",
       "title": "Aktyvios veiklos",
       "subtitle": "Pasirinkite aktyvias veiklas ir išvykas su naujais draugais",
-      "variant": "",
-      "images": [
-        { "image": "/outdoor/outdoor-05.webp", "alt": "Aktyvios veiklos lauke" },
-        { "image": "/outdoor/outdoor-08.webp", "alt": "Komandinis darbas" },
-        { "image": "/outdoor/outdoor-15.webp", "alt": "Išvykos" }
-      ]
+      "variant": ""
     }
   ],
   "campCards": [
     {
       "brand": "bricks4kidz",
       "title": "Pasirink įdomiausią technologijų stovyklą",
-      "link": "https://www.bricks4kidz.lt/vasaros-stovyklos/",
       "hint": "Konstruojame su LEGO robotus ir koduojame",
+      "link": "https://www.bricks4kidz.lt/vasaros-stovyklos/",
       "logo": "/logos/bricks4kidz.webp",
       "logoAlt": "Bricks4Kidz",
       "logoWide": false,
       "interval": 3000,
       "images": [
-        { "src": "/b4k/ateities-isradejai-600x600.webp", "alt": "LEGO konstravimas", "fit": "cover", "bg": "" },
-        { "src": "/b4k/darzelis-isleistuves-karusele-03.webp", "alt": "Darželio išleistuvės", "fit": "cover", "bg": "" },
-        { "src": "/b4k/magic-lego-600x600-02.webp", "alt": "Magiška LEGO", "fit": "cover", "bg": "" }
+        {
+          "src": "/b4k/ateities-isradejai-600x600.webp",
+          "alt": "LEGO konstravimas",
+          "fit": "cover",
+          "bg": ""
+        },
+        {
+          "src": "/b4k/darzelis-isleistuves-karusele-03.webp",
+          "alt": "Darželio išleistuvės",
+          "fit": "cover",
+          "bg": ""
+        },
+        {
+          "src": "/b4k/magic-lego-600x600-02.webp",
+          "alt": "Magiška LEGO",
+          "fit": "cover",
+          "bg": ""
+        }
       ]
     },
     {
       "brand": "lms",
       "title": "Atrask medicinos ir veterinarijos paslaptis Mažojoje Medicinos Mokykloje",
-      "link": "https://littlemedicalschool.com/lithuania/vasaros-stovyklos/",
       "hint": "Ugdome smalsumą, mokslinį mąstymą ir sveikos gyvensenos įpročius",
+      "link": "https://littlemedicalschool.com/lithuania/vasaros-stovyklos/",
       "logo": "/logos/new_LMS_logo.webp",
       "logoAlt": "LMS",
       "logoWide": false,
       "interval": 3500,
       "images": [
-        { "src": "https://littlemedicalschool.com/lithuania/files/2023/02/naujienlaiskiui-03-500x500.jpg", "alt": "Mažieji medikai", "fit": "cover", "bg": "" },
-        { "src": "https://cdn.builder.io/api/v1/image/assets%2Ffc207801b22940b69c4754284e090cf1%2Ff7b6d6767e664297a3451302434d1004?format=webp&width=800", "alt": "Medicinos žaidimas", "fit": "cover", "bg": "" },
-        { "src": "https://cdn.builder.io/api/v1/image/assets%2Ffc207801b22940b69c4754284e090cf1%2Fa6330e8e7e594afc91839b8c7fc16f25?format=webp&width=800", "alt": "Medicinos mokykla", "fit": "cover", "bg": "" }
+        {
+          "src": "https://littlemedicalschool.com/lithuania/files/2023/02/naujienlaiskiui-03-500x500.jpg",
+          "alt": "Mažieji medikai",
+          "fit": "cover",
+          "bg": ""
+        },
+        {
+          "src": "https://cdn.builder.io/api/v1/image/assets%2Ffc207801b22940b69c4754284e090cf1%2Ff7b6d6767e664297a3451302434d1004?format=webp&width=800",
+          "alt": "Medicinos žaidimas",
+          "fit": "cover",
+          "bg": ""
+        },
+        {
+          "src": "https://cdn.builder.io/api/v1/image/assets%2Ffc207801b22940b69c4754284e090cf1%2Fa6330e8e7e594afc91839b8c7fc16f25?format=webp&width=800",
+          "alt": "Medicinos mokykla",
+          "fit": "cover",
+          "bg": ""
+        }
       ]
     },
     {
       "brand": "businesskids",
       "title": "Sukurk savo verslo idėją",
-      "link": "https://businesskids.lt/",
       "hint": "Jaunųjų verslo ryklių stovykla",
+      "link": "https://businesskids.lt/",
       "logo": "/logos/businesskids-horizontal.webp",
       "logoAlt": "Business Kids",
       "logoWide": true,
       "interval": 3200,
       "images": [
-        { "src": "/b4k/shark.webp", "alt": "Jaunųjų verslo rykliai", "fit": "contain", "bg": "bk-shark" },
-        { "src": "/bk-imported/businessteens.webp", "alt": "Business Kids", "fit": "cover", "bg": "" },
-        { "src": "/bk/Small_Carousel_BK.webp", "alt": "Business Kids", "fit": "cover", "bg": "" }
+        {
+          "src": "/b4k/shark.webp",
+          "alt": "Jaunųjų verslo rykliai",
+          "fit": "contain",
+          "bg": "bk-shark"
+        },
+        {
+          "src": "/bk-imported/businessteens.webp",
+          "alt": "Business Kids",
+          "fit": "cover",
+          "bg": ""
+        },
+        {
+          "src": "/bk/Small_Carousel_BK.webp",
+          "alt": "Business Kids",
+          "fit": "cover",
+          "bg": ""
+        }
       ]
     }
   ],
   "benefits": {
     "title": "Kodėl verta rinktis mūsų stovyklas?",
     "pills": [
-      { "text": "Mokymasis per žaidimą", "color": "red" },
-      { "text": "Smagus prasmingas laikas", "color": "blue" },
-      { "text": "Pilnavertis maitinimas 3 kartus", "color": "yellow" },
-      { "text": "Nauji draugai ir komandiniai žaidimai", "color": "blue" },
-      { "text": "Laikas be nuobodulio ir ekranų", "color": "red" },
-      { "text": "Aktyvios veiklos lauke", "color": "green" },
-      { "text": "Visoje Lietuvoje", "color": "yellow" },
-      { "text": "Tarptautinės STEAM programos", "color": "red" }
+      {
+        "text": "Mokymasis per žaidimą",
+        "color": "red"
+      },
+      {
+        "text": "Smagus prasmingas laikas",
+        "color": "blue"
+      },
+      {
+        "text": "Pilnavertis maitinimas 3 kartus",
+        "color": "yellow"
+      },
+      {
+        "text": "Nauji draugai ir komandiniai žaidimai",
+        "color": "blue"
+      },
+      {
+        "text": "Laikas be nuobodulio ir ekranų",
+        "color": "red"
+      },
+      {
+        "text": "Aktyvios veiklos lauke",
+        "color": "green"
+      },
+      {
+        "text": "Visoje Lietuvoje",
+        "color": "yellow"
+      },
+      {
+        "text": "Tarptautinės STEAM programos",
+        "color": "red"
+      }
     ]
   },
   "testimonials": [
-    { "text": "Sūnus praleido nuostabią savaitę Bricks4Kidz stovykloje – kiekvieną dieną grįždavo su naujais LEGO robotais ir idėjomis. Tobulai suderintas žaidimas ir mokymasis. Kitą vasarą tikrai grįšim!", "author": "Ingrida P., Vilnius · Google atsiliepimas" },
-    { "text": "Little Medical School stovykla – tai ne tik smagu, bet ir labai prasminga. Dukra susipažino su medicinos pagrindais ir grįžo pilna įkvėpimo studijuoti toliau. Ačiū už profesionalumą!", "author": "Aurimas K., Kaunas · Google atsiliepimas" },
-    { "text": "Business Kids stovykloje vaikas sukūrė savo verslo idėją ir drąsiai pristatė ją prieš auditoriją. Po stovyklos atsirado pasitikėjimas savimi – neįkainojama patirtis!", "author": "Rasa V., Klaipėda · Google atsiliepimas" },
-    { "text": "Puikiai organizuota stovykla – maitinimas skanus, auklėtojai dėmesingi, programa įdomi. Dukra kiekvieną rytą laukė stovyklos dienos. Rekomenduoju visiems tėvams!", "author": "Tomas A., Šiauliai · Google atsiliepimas" },
-    { "text": "Po stovyklos sūnus pats pradėjo domėtis programavimu ir robotika. Tai būtent tokia patirtis, kuri pakeičia vaiko požiūrį į mokymąsi. Ačiū visai Bricks4Kidz komandai!", "author": "Jūratė M., Vilnius · Google atsiliepimas" },
-    { "text": "Laikas be ekranų, aktyvios veiklos lauke, nauji draugai – tiksliai tai, ko reikėjo šią vasarą. Vaikas grįžo laimingas ir pilnas istorijų. Tikrai renkamės ir kitais metais.", "author": "Dovilė Š., Panevėžys · Google atsiliepimas" },
-    { "text": "Veterinarijos modulis Little Medical School stovykloje buvo tiesiog stebuklingas – dukra po jo dar labiau įsimylėjo gyvūnus ir svajoja tapti veterinare. Dėkojame!", "author": "Gintarė B., Alytus · Google atsiliepimas" },
-    { "text": "Tarptautinio lygio STEAM programos, puikios patalpos ir pedagogai. Sūnui tai buvo įsimintiniausia vasaros savaitė. Tikrai rekomenduojame kiekvienai šeimai!", "author": "Mantas L., Kaunas · Google atsiliepimas" }
+    {
+      "text": "Sūnus praleido nuostabią savaitę Bricks4Kidz stovykloje – kiekvieną dieną grįždavo su naujais LEGO robotais ir idėjomis. Tobulai suderintas žaidimas ir mokymasis. Kitą vasarą tikrai grįšim!",
+      "author": "Ingrida P., Vilnius · Google atsiliepimas"
+    },
+    {
+      "text": "Little Medical School stovykla – tai ne tik smagu, bet ir labai prasminga. Dukra susipažino su medicinos pagrindais ir grįžo pilna įkvėpimo studijuoti toliau. Ačiū už profesionalumą!",
+      "author": "Aurimas K., Kaunas · Google atsiliepimas"
+    },
+    {
+      "text": "Business Kids stovykloje vaikas sukūrė savo verslo idėją ir drąsiai pristatė ją prieš auditoriją. Po stovyklos atsirado pasitikėjimas savimi – neįkainojama patirtis!",
+      "author": "Rasa V., Klaipėda · Google atsiliepimas"
+    },
+    {
+      "text": "Puikiai organizuota stovykla – maitinimas skanus, auklėtojai dėmesingi, programa įdomi. Dukra kiekvieną rytą laukė stovyklos dienos. Rekomenduoju visiems tėvams!",
+      "author": "Tomas A., Šiauliai · Google atsiliepimas"
+    },
+    {
+      "text": "Po stovyklos sūnus pats pradėjo domėtis programavimu ir robotika. Tai būtent tokia patirtis, kuri pakeičia vaiko požiūrį į mokymąsi. Ačiū visai Bricks4Kidz komandai!",
+      "author": "Jūratė M., Vilnius · Google atsiliepimas"
+    },
+    {
+      "text": "Laikas be ekranų, aktyvios veiklos lauke, nauji draugai – tiksliai tai, ko reikėjo šią vasarą. Vaikas grįžo laimingas ir pilnas istorijų. Tikrai renkamės ir kitais metais.",
+      "author": "Dovilė Š., Panevėžys · Google atsiliepimas"
+    },
+    {
+      "text": "Veterinarijos modulis Little Medical School stovykloje buvo tiesiog stebuklingas – dukra po jo dar labiau įsimylėjo gyvūnus ir svajoja tapti veterinare. Dėkojame!",
+      "author": "Gintarė B., Alytus · Google atsiliepimas"
+    },
+    {
+      "text": "Tarptautinio lygio STEAM programos, puikios patalpos ir pedagogai. Sūnui tai buvo įsimintiniausia vasaros savaitė. Tikrai rekomenduojame kiekvienai šeimai!",
+      "author": "Mantas L., Kaunas · Google atsiliepimas"
+    }
   ],
   "contact": {
     "label": "Susisiekite su mumis",
@@ -141,10 +249,10 @@
   },
   "promo": {
     "badge": "AKCIJA",
-    "price": "−20%",
-    "sub": "iki birželio 1 d.",
+    "price": "30 EUR",
+    "sub": "Registruojantis su draugu",
     "cta": "Registruokis dabar",
-    "note": "Vietų skaičius ribotas"
+    "note": "Po 15 EUR kiekvienam"
   },
   "brandsFooter": [
     {
@@ -152,9 +260,18 @@
       "logoAlt": "Bricks4Kidz",
       "link": "https://www.bricks4kidz.lt/",
       "socials": [
-        { "platform": "facebook", "url": "https://www.facebook.com/Bricks4KidzLietuva" },
-        { "platform": "instagram", "url": "https://www.instagram.com/bricks4kidzlietuva/" },
-        { "platform": "tiktok", "url": "https://www.tiktok.com/@bricks4kidzlietuva" }
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/Bricks4KidzLietuva"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/bricks4kidzlietuva/"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@bricks4kidzlietuva"
+        }
       ]
     },
     {
@@ -162,9 +279,18 @@
       "logoAlt": "Little Medical School",
       "link": "https://littlemedicalschool.com/lithuania/",
       "socials": [
-        { "platform": "facebook", "url": "https://www.facebook.com/LittlemedicalschoolLietuva" },
-        { "platform": "instagram", "url": "https://www.instagram.com/mazojimedicinosmokykla/" },
-        { "platform": "tiktok", "url": "https://www.tiktok.com/@mazojimedicinosmokykla" }
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/LittlemedicalschoolLietuva"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/mazojimedicinosmokykla/"
+        },
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@mazojimedicinosmokykla"
+        }
       ]
     },
     {
@@ -172,7 +298,10 @@
       "logoAlt": "Business Kids",
       "link": "https://businesskids.lt/",
       "socials": [
-        { "platform": "facebook", "url": "https://www.facebook.com/profile.php?id=61572094061392" }
+        {
+          "platform": "facebook",
+          "url": "https://www.facebook.com/profile.php?id=61572094061392"
+        }
       ]
     }
   ]
